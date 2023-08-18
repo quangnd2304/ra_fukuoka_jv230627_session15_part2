@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các sự kiện khác</title>
+</head>
+
+<body onresize="resizeBrowser()">
+    <label for="data">Data</label>
+    <input type="text" name="data" id="data" />
+    <textarea name="address" id="address" cols="30" rows="5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit accusantium odio est dolor ab vero sunt saepe repellendus ipsa. Perferendis ipsam consectetur aut sunt eos aliquid cupiditate modi neque consequuntur?
+    </textarea>
+    <script>
+        let inputData = document.getElementById("data");
+        inputData.addEventListener("change", function () {
+            console.log("Dữ liệu sự kiện change-->", inputData.value);
+        })
+        inputData.addEventListener("input", function () {
+            console.log("Dữ liệu sự kiện input-->", inputData.value);
+        })
+        let address = document.getElementById("address");
+        address.addEventListener("scroll", function () {
+            console.log("Bạn đang scroll addresss");
+        })
+        function resizeBrowser() {
+            console.log("Bạn vừa thay đổi kích thước browser");
+        }
+        window.onload = function () {
+            console.log("Bạn vừa load xong giao diện web");
+        }
+    </script>
+</body>
+
+</html>

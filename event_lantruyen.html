@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan truyền sự kiện</title>
+</head>
+
+<body>
+    <style>
+        div,
+        p {
+            border: 1px solid black;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+    <div id="div">
+        Nội dung của div
+        <p id="p">
+            Nội dung của p
+        </p>
+    </div>
+    <script>
+        let div = document.getElementById("div");
+        let p = document.getElementById("p");
+        div.addEventListener("click", function () {
+            console.log("Bạn vừa click vào thẻ div");
+        }, true)
+        p.addEventListener("click", function () {
+            console.log("Bạn vừa click vào thẻ p");
+        }, true)
+    </script>
+</body>
+
+</html>

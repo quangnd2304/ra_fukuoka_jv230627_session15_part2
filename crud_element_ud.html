@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Xây dựng form login trong div có id là ra bằng javascript -->
+    <div id="ra">
+        <!-- <form action="" method="post">
+            <label for="userName">User Name</label>
+            <input type="text" name="userName" id="userName" />
+            <br>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" />
+            <br>
+            <input type="submit" value="Login" />
+        </form> -->
+    </div>
+    <script>
+        let ra = document.getElementById("ra");
+        //1. Tạo form
+        let loginForm = document.createElement("form");
+        loginForm.setAttribute("action", "");
+        loginForm.setAttribute("method", "post");
+        ra.appendChild(loginForm);
+        //2. Tạo label userName
+        let lableUserName = document.createElement("label");
+        lableUserName.setAttribute("for", "userName");
+        lableUserName.innerText = "UserName";
+        loginForm.appendChild(lableUserName);
+        //3. Tạo input userName
+        let inputUserName = document.createElement("input");
+        inputUserName.setAttribute("type", "text");
+        inputUserName.setAttribute("name", "userName");
+        inputUserName.setAttribute("id", "userName");
+        loginForm.appendChild(inputUserName);
+        //4. Tạo br
+        let brUserName = document.createElement("br");
+        loginForm.appendChild(brUserName);
+        //5. Tạo label password
+        let labelPassword = document.createElement("label");
+        labelPassword.setAttribute("for", "password");
+        labelPassword.innerText = "Password";
+        loginForm.appendChild(labelPassword);
+        //6. Tạo input password
+        let inputPassword = document.createElement("input");
+        inputPassword.setAttribute("type", "password");
+        inputPassword.setAttribute("name", "password");
+        inputPassword.setAttribute("id", "password");
+        loginForm.appendChild(inputPassword);
+        //7. Tạo br
+        let brPassword = document.createElement("br");
+        loginForm.appendChild(brPassword);
+        //8. Tạo input submit
+        let inputSubmit = document.createElement("input");
+        inputSubmit.setAttribute("type", "submit");
+        inputSubmit.setAttribute("value", "Login");
+        loginForm.appendChild(inputSubmit);
+
+    </script>
+</body>
+
+</html>

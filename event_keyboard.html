@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+
+<body>
+    <button id="keyboard">Keyboard</button>
+    <script>
+        let keyboard = document.getElementById("keyboard");
+        keyboard.addEventListener("keydown", function (event) {
+            //event.key: trả ra phím đang nhấn
+            //event.code: trả ra mã code của phím đang nhấn
+            console.log("Bạn đang ấn phím", event.key);
+        })
+        keyboard.addEventListener("keyup", function (event) {
+            console.log("Bạn vừa nhả phím", event.key);
+        })
+        keyboard.addEventListener("keypress", function (event) {
+            console.log("Bạn đang giữ phím", event.key);
+        })
+    </script>
+</body>
+
+</html>

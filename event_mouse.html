@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện với chuột</title>
+</head>
+
+<body>
+    <button id="btn1">MouseUp/MouseDown</button>
+    <p id="ra">Rikkei Academy</p>
+    <button id="btn2">Double Click</button>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("mouseup", function () {
+            console.log("Bạn vừa nhả chuột trên button MouseUp/MouseDown");
+        })
+        btn1.addEventListener("mousedown", function () {
+            console.log("Bạn vừa nhấp chuột trên button MouseUp/MouseDown");
+        })
+        btn1.addEventListener("click", function () {
+            console.log("Bạn vừa click vào button MouseUp/MouseDown");
+        })
+        // Khi di chuột vào đoạn văn, chữ đoạn văn là màu đỏ, khi di chuột ra chữ là màu xanh
+        let ra = document.getElementById("ra");
+        ra.addEventListener("mouseover", function () {
+            ra.style.color = "red";
+        })
+        ra.addEventListener("mouseout", function () {
+            ra.style.color = "green";
+        })
+        //Sự kiện double click
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("dblclick", function () {
+            alert("Bạn vừa double click vào button 02");
+        })
+
+    </script>
+</body>
+
+</html>

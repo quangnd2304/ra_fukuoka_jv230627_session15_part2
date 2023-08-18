@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <!-- 3 cách làm việc sự kiện -->
+    <!-- Cách 1: gắn sự kiện trực tiếp trên element -->
+    <button onclick="clickButton1()">Gắn sự kiện trên element</button>
+    <!-- Cách 2: gắn sự kiện qua đối tượng element -->
+    <button id="btn2">Gắn sự kiện qua đối tượng element</button>
+    <!-- Cách 3: gắn sự kiện qua lắng nghe sự kiện trên DOM -->
+    <button id="btn3">Gắn sự kiên qua lắng nghe sự kiện trên DOM</button>
+
+    <script>
+        //function xử lý sự kiện
+        function clickButton1() {
+            console.log("Bạn vừa click vào button 1");
+        }
+        //Cách 2
+        let btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+            console.log("bạn vừa click vào button 2");
+        }
+        // Cách 3
+        let btn3 = document.getElementById("btn3");
+        //addEventListener(event,function,useCapture)
+        btn3.addEventListener("click", function () {
+            console.log("Bạn vừa click vào button 3");
+        })
+    </script>
+</body>
+
+</html>

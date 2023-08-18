@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Element</title>
+</head>
+
+<body>
+    <!-- Xây dựng 1 button có lable là Rikkei Academy trong div ra -->
+    <div id="ra">
+        <!-- <button>Rikkei Academy</button> -->
+    </div>
+    <!-- Sử dụng javascript để tạo div va button như trên -->
+    <script>
+        // Tạo button Rikkei Academy trong element div có id là ra
+        //1. Truy cập vào phần tử div có id là ra - divElement - getElementById
+        let ra = document.getElementById("ra");
+        //2. Tạo element button - document.createElement("tagName")
+        let btnRa = document.createElement("button");
+        btnRa.innerText = "Rikkei Academy";
+        //3. add button vào divElement - divElement.appendChild(button)
+        ra.appendChild(btnRa);
+        // Thêm thẻ h2 có nội dung là Học viện Rikkei trong div ra
+        //1. Tạo element h2 có nội dung học viện Rikkei
+        let h2 = document.createElement("h2");
+        h2.innerText = "Học viện Rikkei";
+        //2. add h2 vào ra
+        ra.appendChild(h2);
+        // Xóa button Rikkei Academy trong div có id là ra
+        ra.removeChild(btnRa);
+        // Thay thế thẻ h2 thành h3 có nội dung là Rikkei Academy - Fukuoka
+        //1. Tạo element mới(h3) để thay thế
+        let h3 = document.createElement("h3");
+        h3.innerText = "Rikkei Academy - Fukuoka";
+        //2. Thay thế element cũ (h2) bằng element mới(h3)
+        ra.replaceChild(h3, h2);
+    </script>
+</body>
+
+</html>
